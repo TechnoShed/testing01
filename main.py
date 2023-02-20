@@ -1,9 +1,12 @@
+from classes import *
 from includes import *
+
 from flask import Flask
+session = makeconnection("VehicleComments","vehicleapps","TsDvEhIcLeApPs")
+
+
 
 app = Flask(__name__)
-
-
 
 @app.route('/')
 def hello():
@@ -11,6 +14,5 @@ def hello():
 
 print(txtline+"\nhi\n"+txtline)
 
-session = makeconnection("VehicleComments","vehicleapps","TsDvEhIcLeApPs")
 
 app.run()
